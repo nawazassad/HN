@@ -1,0 +1,25 @@
+<mat-card *ngIf="posts.url" (click)="openURL(posts.url)">
+  <ul>
+    <li>
+      <mat-card-header class="align">
+        <mat-card-title>{{ posts.title }} </mat-card-title>
+        <mat-card-subtitle>({{ posts.url | domain }})</mat-card-subtitle>
+        <mat-card-subtitle>
+          <span> {{ posts.score }} points by </span>
+          <span class="commenter">{{ posts.by }}</span>
+          <span> | {{ posts.time | amFromUnix | amTimeAgo }} </span>
+
+          <span *ngIf="posts.descendants !== 0">
+            <span *ngIf="posts.descendants === 1"
+              >| {{ posts.descendants }} comment</span
+            >
+            <span *ngIf="posts.descendants > 1"
+              >| {{ posts.descendants }} comments</span
+            >
+          </span>
+          <span *ngIf="posts.descendants === 0"> | discuss</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+    </li>
+  </ul>
+</mat-card>

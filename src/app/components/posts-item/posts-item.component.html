@@ -1,0 +1,16 @@
+<mat-progress-bar mode="query" color="warn" *ngIf="loading"></mat-progress-bar>
+<div class="post">
+  <ng-container *ngFor="let post of posts">
+    <app-posts [posts]="post"></app-posts>
+  </ng-container>
+  <div class="loader" *ngIf="postsAvailable">
+    <button
+      mat-raised-button
+      color="accent"
+      *ngIf="!loading"
+      (click)="loader()"
+    >
+      Load More
+    </button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<mat-toolbar color="accent">
+  <a class="title" router Link="posts/top">Hacker News</a>
+
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<nav mat-tab-nav-bar mat-align-tabs="center">
+  <a
+    mat-tab-link
+    *ngFor="let link of navLinks"
+    routerLink="{{ link.location }}"
+    routerLinkActive="active"
+  >
+    <span>{{ link.label | uppercase }}</span>
+  </a>
+</nav>
