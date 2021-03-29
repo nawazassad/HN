@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
-## Development Dependency
+## Prerequisites
 - Install Angular Material : ng add @angular/material
 - Install ngx-moment : npm install --save moment ngx-moment
 
